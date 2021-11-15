@@ -82,9 +82,9 @@ function ConvertTime(p_hour){
 // 1 - present
 // 2 - future 
 function GetChronoOrder(p_timeDiff){
-    if (p_timeDiff < 0) { return 0; }
+    if (p_timeDiff > 0) { return 0; }
     else if (p_timeDiff === 0) { return 1; }
-    else if (p_timeDiff > 0) { return 2; }
+    else if (p_timeDiff < 0) { return 2; }
 }
 
 function GetOffsetMoment(p_offsetHours){
